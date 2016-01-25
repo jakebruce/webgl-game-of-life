@@ -1,3 +1,5 @@
+window.GOL_UPDATE_INTERVAL = 5;
+
 /**
  * Game of Life simulation and display.
  * @param {HTMLCanvasElement} canvas Render target
@@ -207,7 +209,7 @@ GOL.prototype.start = function() {
         this.timer = setInterval(function(){
             gol.step();
             gol.draw();
-        }, 60);
+        }, window.GOL_UPDATE_INTERVAL);
     }
     return this;
 };
